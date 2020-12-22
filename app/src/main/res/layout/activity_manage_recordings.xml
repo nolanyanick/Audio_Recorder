@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ManageRecordingsActivity" >
+
+    <!-- TextView to display a message when no files/recordings are found -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No recordings could be found!"
+        android:id="@+id/noRecordingsTextView"
+        android:visibility="gone" />
+
+    <!-- ScrollView to contain the RadioGroup of files/recordings -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="102dp" >
+
+        <!-- Container for the list of files/recordings -->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recordingsRadioGroup" >
+        </RadioGroup>
+
+    </ScrollView>
+
+    <!-- Other Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="46dp"
+        android:layout_alignParentBottom="true" >
+
+        <!-- Play Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            android:id="@+id/playButton"
+            android:onClick="playButtonClick"
+            android:layout_margin="5dp"/>
+
+        <!-- Stop Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:id="@+id/stopPlayingButton"
+            android:onClick="stopPlayingButtonClick"
+            android:layout_margin="5dp"/>
+
+        <!-- Add Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/addRecordingButton"
+            android:onClick="addButtonClick"
+            android:layout_margin="5dp"/>
+
+        <!-- Delete Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:id="@+id/deleteRecordingButton"
+            android:onClick="deleteButtonClick"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+    <!-- Back Button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/backButton"
+        android:onClick="backButtonClick"
+        android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
